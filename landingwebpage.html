@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #video-background::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 100%;
+            border: 10px solid rgba(255, 255, 255, 0.5); /* Adjust the color and opacity as needed */
+            box-sizing: border-box;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: #0a0a0a;
+            text-align: center;
+        }
+        
+       
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #45a049;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-box button.register {
+            background-color: #2196F3;
+        }
+      
+    </style>
+    
+</head>
+<header>
+    <h4>Home &nbsp; Models &nbsp; UsedCars
+        <a href="https://www.audiusa.com/us/web/en.html">
+           <h4> Links <h4>
+            </a> </h4>
+</header>
+<body>
+    <section class="team-section">
+    <div>
+    <video id="video-background" autoplay muted loop>
+        <source src="https://player.vimeo.com/external/455720252.sd.mp4?s=557e59e08bb27fd89994df98707978a60acb549c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    </section>
+    <div class="content">
+        <!-- Your HTML content goes here -->
+        <h1>Welcome Come To Madhunika Car real-world</h1>
+        <p>Welcome.
+            To the start of a beautiful love story.
+            Where you meet the car of your dreams in its full glory.</p>
+            
+          
+    </div>
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form class="login-box">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <h2>Register</h2>
+        <form class="login-box" id="registerForm">
+            <input type="text" placeholder="New Username" id="newUsername" required>
+            <input type="password" placeholder="New Password" id="newPassword" required>
+            <button type="button" class="register" onclick="register()">Register</button>
+        </form>  
+    </div>
+    
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            
+            if (username && password) {
+                alert("Login successful!");
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        function register() {
+            var newUsername = document.getElementById("newUsername").value;
+            var newPassword = document.getElementById("newPassword").value;
+
+            // Simulating a basic client-side registration
+            if (newUsername && newPassword) {
+                // Simulate sending registration data to the server (in a real application, this would be an AJAX call)
+                alert("Registration successful!\nUsername: " + newUsername + "\nPassword: " + newPassword);
+                
+                // Optionally, clear the registration form after successful registration
+                document.getElementById("registerForm").reset();
+            } else {
+                alert("Please enter both new username and password.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
